@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: black; /* Set background color to black */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: violet; /* Set header color to violet */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: black; /* Set cell background color to black */
+  border: 1px solid violet; /* Set cell border color to violet */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  color: violet; /* Set cell text color to violet */
+}
+
+.cell.x::before {
+  content: 'X';
+  color: violet; /* Set X color to violet */
+}
+
+.cell.circle::before {
+  content: 'O';
+  color: violet; /* Set O color to violet */
+}
+
+.winning-message {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: violet; /* Set winning message color to violet */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.winning-message.show {
+  display: flex;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: violet; /* Set button background color to violet */
+  color: black; /* Set button text color to black */
+  border: none;
+  border-radius: 5px;
+}
+.cell.x::before {
+  content: 'X';
+  color: violet; /* Set X color to violet */
+  text-shadow: 0 0 10px violet, 0 0 20px violet, 0 0 30px violet; /* Add glowing effect */
+}
+
+.cell.circle::before {
+  content: 'O';
+  color: violet; /* Set O color to violet */
+  text-shadow: 0 0 10px violet, 0 0 20px violet, 0 0 30px violet; /* Add glowing effect */
+}
+
